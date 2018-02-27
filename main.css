@@ -1,0 +1,39 @@
+body {
+  display: flex; flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+h1 {
+  font-size: 36;
+  font-weight: lighter;
+  font-style: normal;
+  font-family: Lucida console; sans-serif;
+}
+
+.inputsection {
+  margin: 15px 0px;
+  width:400px;
+}
+
+.inputs {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-top: 10px;
+}
+
+.addoption {margin-top: 10px;
+}
+
+button {
+  background-color: #f44336;;
+  color: white;
+  border: none;
+  text-align: center;
+  padding: 5px 5px;
+  font-size: 14px;
+}
