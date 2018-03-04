@@ -3,7 +3,8 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-}
+  }
+
 h1 {
   font-size: 36;
   font-weight: lighter;
@@ -37,3 +38,5 @@ button {
   padding: 5px 5px;
   font-size: 14px;
 }
+
+.bc {background-color: orange;}

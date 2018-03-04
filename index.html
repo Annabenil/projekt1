@@ -10,10 +10,30 @@
     <img src="https://media.giphy.com/media/l3q2Dh5BA4zRFSwak/giphy.gif" width="400" height="300">
     <div class="inputsection">
       <div class="inputs">
-        <input placeholder="hmm" </input>
+        <input placeholder="hmm"> </input>
       </div>
       <button class="addoption">Add</button>
     </div>
+    <div class="resultsection"> </div>
     <button>Search</button>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function() {
+    $(".resultsection").hide()
+
+    var add_option = function() {
+      $(".inputs").append ("<input></input>")
+    }
+
+    $(".addoption").click(add_option)
+    })
+
+    $("h1").click(function() {
+      $("body").toggleClass("bc")
+      });
+
+
+    </script>
   </body>
 </html>
