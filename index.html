@@ -6,7 +6,7 @@
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Välkommen</h1>
+    <h1>Help me choose between...</h1>
     <img src="https://media.giphy.com/media/l3q2Dh5BA4zRFSwak/giphy.gif" width="400" height="300">
     <div class="inputsection">
       <div class="inputs">
@@ -15,25 +15,40 @@
       <button class="addoption">Add</button>
     </div>
     <div class="resultsection"> </div>
-    <button>Search</button>
+    <button class="submit">Go</button>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-    $(function() {
-    $(".resultsection").hide()
+      $(function() {
+        $(".resultsection").hide()
 
-    var add_option = function() {
-      $(".inputs").append ("<input></input>")
-    }
+      var add_option = function() {
+        $(".inputs").append ("<input></input>")
+      }
+      $(".addoption").click(add_option)
 
-    $(".addoption").click(add_option)
+      $("h1").click(function() {
+      $("body").toggleClass("bc")
     })
 
-    $("h1").click(function() {
-      $("body").toggleClass("bc")
-      });
+    var options = []
+    var submit = function() {
+      $(".inputsection").hide()
+      $(".resultsection").css("display", "flex")
+      $("input").each(function() {
+        if ($(this).val() != "") {
+        console.log ($(this).val())
+        options.push($(this).val())
+        }
 
-
+      })
+      var winner = options[Math.floor(Math.random() * options.length)]
+      console.log(winner)
+      $(".resultsection").text(winner)
+      $("h1").text("The winner is:")
+    }
+    $(".submit").click(submit)
+  })
     </script>
   </body>
 </html>

@@ -31,12 +31,22 @@ input {
 }
 
 button {
-  background-color: #f44336;;
+  background-color: #f44336;
   color: white;
   border: none;
   text-align: center;
   padding: 5px 5px;
   font-size: 14px;
+
 }
 
 .bc {background-color: orange;}
+
+.resultsection {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  font-family: Lucida console; sans-serif;
+}
